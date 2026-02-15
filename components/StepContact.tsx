@@ -8,6 +8,10 @@ export const StepContact: React.FC<StepProps> = ({ data, updateData, onNext, onB
   const [localPhone, setLocalPhone] = useState(data.phone);
   const [error, setError] = useState('');
 
+  // Generate a random number between 5 and 19 for the job count
+  // Using useState with a function guarantees it's calculated only once per component mount
+  const [matchCount] = useState(() => Math.floor(Math.random() * (19 - 5 + 1)) + 5);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!localName.trim() || !localEmail.trim() || !localPhone.trim()) {
@@ -25,7 +29,7 @@ export const StepContact: React.FC<StepProps> = ({ data, updateData, onNext, onB
           診断結果をお送りします
         </h2>
         <p className="text-sm text-slate-500">
-            あなたにマッチした非公開求人が<span className="font-bold text-yellow-600">18件</span>見つかりました。<br/>
+            あなたにマッチした非公開求人が<span className="font-bold text-yellow-600">{matchCount}件</span>見つかりました。<br/>
             優先案内のため、ご連絡先を教えていただけますか？
         </p>
       </div>
