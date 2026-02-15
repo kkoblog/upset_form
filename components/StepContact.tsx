@@ -84,7 +84,7 @@ export const StepContact: React.FC<StepProps> = ({ data, updateData, onNext, onB
             
             <div className="flex items-center justify-center gap-2 mt-3 text-slate-500 text-xs font-bold">
                <Zap className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-               <p>平均2分で自動返信メールが届きます</p>
+               <p>平均2分で担当者より返信メールが届きます</p>
             </div>
             
             <p className="text-center text-[10px] text-slate-400 mt-2">

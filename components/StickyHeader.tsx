@@ -1,3 +1,4 @@
+import logoImage from '../assets/images/upset_logo.png';
 import React from 'react';
 import { ArrowRightCircle, Clock } from 'lucide-react';
 
@@ -15,13 +16,11 @@ export const StickyHeader: React.FC = () => {
         <div className="flex items-center gap-2">
           {/* UPSET Logo Representation */}
           <div className="flex items-center gap-1">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-[#000080] text-yellow-400 rounded-lg flex items-center justify-center font-black text-xl md:text-2xl italic border-b-4 border-yellow-400">
-              U
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-xl md:text-2xl text-slate-900 tracking-tighter leading-none">UPSET</span>
-              <span className="text-[10px] md:text-xs text-slate-500 font-bold tracking-widest leading-none">株式会社アップセット</span>
-            </div>
+          <img
+  src={logoImage}
+  alt="UPSET ロゴ"
+  className="h-10 w-auto"
+/> 
           </div>
         </div>
         

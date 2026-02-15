@@ -24,7 +24,7 @@ export const StepSuccess: React.FC = () => {
         </div>
         <p className="text-sm text-blue-700">
             ご登録いただいたメールアドレスへ<br />
-            <span className="font-bold underline decoration-orange-400 decoration-2">10分以内</span>に担当者より詳細をお送りします。
+            <span className="font-bold underline decoration-orange-400 decoration-2">2分以内</span>に担当者より詳細をお送りします。
         </p>
       </div>
     </div>

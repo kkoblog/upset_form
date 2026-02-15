@@ -1,3 +1,4 @@
+import footerLogo from './assets/images/upset_logo2.png';
 import React from 'react';
 import { StickyHeader } from './components/StickyHeader';
 import { DynamicHero } from './components/DynamicHero';
@@ -18,12 +19,16 @@ function App() {
       <footer className="bg-[#0f172a] text-slate-400 py-12 text-center text-sm border-t border-slate-800">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-6">
-               <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-[#000080] text-yellow-400 rounded-lg flex items-center justify-center font-black text-xl italic border-b-2 border-yellow-400">
-                    U
-                  </div>
-                  <span className="text-xl font-bold text-white tracking-tighter">UPSET</span>
-              </div>
+          <div className="flex items-center gap-3">
+  <img
+    src={footerLogo}
+    alt="UPSET ロゴ"
+    className="h-10 w-auto"
+  />
+  <span className="text-xl font-bold text-white tracking-tighter">
+    UPSET
+  </span>
+</div>
           </div>
           <div className="flex justify-center gap-6 mb-8 text-xs font-medium">
             <a href="#" className="hover:text-white transition-colors">運営会社</a>

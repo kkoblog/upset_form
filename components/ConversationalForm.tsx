@@ -1,3 +1,4 @@
+import logo2 from '../assets/images/upset_logo2.png';
 import React, { useState } from 'react';
 import { FormData, INITIAL_DATA } from '../types';
 import { StepTiming } from './StepTiming';
@@ -104,12 +105,17 @@ export const ConversationalForm: React.FC = () => {
 
           </div>
           
-          <div className="bg-slate-50 px-6 py-4 text-center border-t border-slate-100">
-             <div className="flex items-center justify-center gap-2">
-                 <div className="w-6 h-6 bg-[#000080] text-yellow-400 rounded flex items-center justify-center font-black text-xs italic">U</div>
-                 <span className="text-xs text-slate-400 font-bold">転職エージェントのアップセット</span>
-             </div>
-          </div>
+          <div className="flex items-center justify-center gap-2">
+  <img
+    src={logo2}
+    alt="UPSET"
+    className="h-6 w-auto"
+  />
+  <span className="text-xs text-slate-400 font-bold">
+    20代・30代特化の転職エージェント「UPSET」
+  </span>
+</div>
+
         </div>
       </div>
     </div>

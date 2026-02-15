@@ -24,7 +24,7 @@ export const LPSections: React.FC = () => {
       <div className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4">
           <h3 className="text-center text-2xl md:text-4xl font-black text-slate-800 mb-16 leading-tight">
-            アップセットを利用した多くの方が<br/>
+            UPSETを利用した多くの方が<br/>
             <span className="text-[#000080] relative inline-block">
                 「相談してよかった！」
                  <span className="absolute bottom-1 left-0 w-full h-3 bg-yellow-200 -z-10 opacity-60 rounded-sm"></span>

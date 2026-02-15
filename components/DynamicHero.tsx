@@ -1,10 +1,11 @@
+import ceoImage from '../assets/images/upset_ceo.jpg';
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, Zap, UserCheck, Clock } from 'lucide-react';
 
 export const DynamicHero: React.FC = () => {
   const [headline, setHeadline] = useState({
-    prefix: '転職エージェントのアップセット',
-    main: '総合No.1',
+    prefix: '20代・30代特化の転職エージェント「UPSET」',
+    main: 'コミットメントNo.1',
     sub: 'UPSET'
   });
 
@@ -33,18 +34,7 @@ export const DynamicHero: React.FC = () => {
           <h2 className="text-yellow-400 font-bold text-lg md:text-xl mb-4 tracking-wider animate-in fade-in slide-in-from-bottom-2 duration-700">
             {headline.prefix}
           </h2>
-          <div className="relative inline-block">
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white mb-2 drop-shadow-xl animate-in zoom-in duration-700">
-              {headline.main === '総合No.1' ? headline.sub : headline.main}
-            </h1>
-            {headline.main === '総合No.1' && (
-              <div className="absolute -top-6 -right-12 md:-right-20 bg-yellow-400 text-slate-900 font-black rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center transform rotate-12 shadow-lg border-4 border-white">
-                <span className="text-xs">総合</span>
-                <span className="text-2xl md:text-3xl leading-none">No.1</span>
-                <span className="text-[10px] transform scale-75">RANKING</span>
-              </div>
-            )}
-          </div>
+          
           {headline.main !== '総合No.1' && (
              <p className="text-xl text-slate-300 mt-4 font-bold">UPSETなら、理想の職場が見つかります。</p>
           )}
@@ -53,13 +43,13 @@ export const DynamicHero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-12">
            <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-b from-slate-600 to-slate-800 rounded-full overflow-hidden border-4 border-slate-500 shadow-2xl relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Agent" 
-                    className="w-full h-full object-cover"
-                  />
+                <img 
+  src={ceoImage}
+  alt="キャリアコンシェルジュ" 
+  className="w-full h-full object-cover"
+/>
                   <div className="absolute bottom-0 w-full bg-slate-900/80 text-center py-2 text-xs text-white backdrop-blur-sm">
-                      キャリアコンシェルジュ
+                      キャリアコンサルタント
                   </div>
               </div>
            </div>
