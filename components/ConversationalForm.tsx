@@ -1,5 +1,5 @@
 import logo2 from '../assets/images/upset_logo2.png';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormData, INITIAL_DATA } from '../types';
 import { StepTiming } from './StepTiming';
 import { StepConcerns } from './StepConcerns';
@@ -8,15 +8,33 @@ import { StepContact } from './StepContact';
 import { StepSuccess } from './StepSuccess';
 import { ChevronRight } from 'lucide-react';
 
+
 export const ConversationalForm: React.FC = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(INITIAL_DATA);
+  const nextStep = () => {
+    setStep(prev => prev + 1);
+  
+    setTimeout(() => {
+      const formTop = document.getElementById('contact-form');
+      if (formTop) {
+        const headerOffset = 80; // StickyHeaderの高さ(h-20)
+        const elementPosition = formTop.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 50);
+  };
+  
 
   const updateData = (fields: Partial<FormData>) => {
     setFormData(prev => ({ ...prev, ...fields }));
   };
 
-  const nextStep = () => setStep(prev => prev + 1);
   const prevStep = () => setStep(prev => prev - 1);
 
   // Total steps for user facing flow (excluding Success)

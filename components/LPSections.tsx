@@ -10,12 +10,16 @@ export const LPSections: React.FC = () => {
           <p className="text-slate-400 text-xs font-bold tracking-widest mb-6 uppercase">Trusted by Leading Companies</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
              {/* Placeholder for company logos using text for now */}
-             <span className="font-serif text-2xl font-bold text-slate-600">SONY</span>
-             <span className="font-sans text-2xl font-bold text-slate-600">Panasonic</span>
              <span className="font-mono text-2xl font-bold text-slate-600">TOYOTA</span>
-             <span className="font-serif text-2xl font-bold text-slate-600">Nintendo</span>
-             <span className="font-sans text-2xl font-bold text-slate-600">Hitachi</span>
              <span className="font-mono text-2xl font-bold text-slate-600">SoftBank</span>
+             <span className="text-2xl font-bold text-slate-600">ヨコタエンタープライズ</span>
+             <span className="text-2xl font-bold text-slate-600 tracking-[0.35em]"style={{ fontFamily: "Montserrat, sans-serif" }}>AZOOM</span>
+             <span
+  className="text-2xl font-bold text-slate-600"
+  style={{ fontFamily: "Poppins, sans-serif" }}
+>
+  EcoRing
+</span>
           </div>
         </div>
       </div>

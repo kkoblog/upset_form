@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CheckCircle, Clock } from 'lucide-react';
 
 export const StepSuccess: React.FC = () => {
+  const [isBusinessHours, setIsBusinessHours] = useState(true);
+
+  useEffect(() => {
+    const checkBusinessHours = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      // 10:00 <= hour < 19:00 (午後7時まで)
+      setIsBusinessHours(hour >= 10 && hour < 19);
+    };
+    checkBusinessHours();
+  }, []);
+
   return (
     <div className="text-center py-12 animate-in fade-in zoom-in duration-500">
       <div className="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-8">
@@ -24,7 +36,12 @@ export const StepSuccess: React.FC = () => {
         </div>
         <p className="text-sm text-blue-700">
             ご登録いただいたメールアドレスへ<br />
-            <span className="font-bold underline decoration-orange-400 decoration-2">2分以内</span>に担当者より詳細をお送りします。
+            {isBusinessHours ? (
+              <span className="font-bold underline decoration-orange-400 decoration-2">3分以内</span>
+            ) : (
+              <span className="font-bold underline decoration-orange-400 decoration-2">翌営業日10時以降</span>
+            )}
+            に担当者より詳細をお送りします。
         </p>
       </div>
     </div>
